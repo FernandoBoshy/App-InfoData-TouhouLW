@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/fragment_main">
+
+    <fragment
+        android:id="@+id/fragment_main"
+        android:name="com.example.touhouinfo2.fragments.fragment_main"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_fragment_main_to_fragment_list"
+            app:destination="@id/fragment_list" />
+        <action
+            android:id="@+id/action_fragment_main_to_fragment_tower"
+            app:destination="@id/fragment_tower" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_list"
+        android:name="com.example.touhouinfo2.fragments.fragment_list"
+        android:label="fragment_list"
+        tools:layout="@layout/fragment_list" >
+        <action
+            android:id="@+id/action_fragment_list_to_fragment_main"
+            app:destination="@id/fragment_main" />
+        <action
+            android:id="@+id/action_fragment_list_to_detailList"
+            app:destination="@id/detailList" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_tower"
+        android:name="com.example.touhouinfo2.fragments.fragment_tower"
+        android:label="fragment_tower"
+        tools:layout="@layout/fragment_tower" >
+        <action
+            android:id="@+id/action_fragment_tower_to_fragment_main"
+            app:destination="@id/fragment_main" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailList"
+        android:name="com.example.touhouinfo2.adapter.DetailList"
+        android:label="fragment_detail_list"
+        tools:layout="@layout/fragment_detail_list" />
+</navigation>
